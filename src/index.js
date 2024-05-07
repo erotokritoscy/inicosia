@@ -137,7 +137,7 @@ function App() {
         <section className="traffic-reports-1">
           <h2>Traffic Reports</h2>
           <h2>Select Camera</h2>
-            <select id="cameras-3" onChange={handleCameraSelect} class="camera-selector-2">
+            <select id="cameras" onChange={handleCameraSelect} class="camera-selector-2">
                 <option value="88">Agora Agiou Ant. (Digeni Akrita pros Aglantzia)</option>
                 <option value="85">A. Leventi (Ethniki Froura) IN</option>
                 <option value="84">A. Leventi (Entry) IN</option>
