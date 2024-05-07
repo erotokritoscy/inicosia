@@ -22,7 +22,7 @@ const selectedValue = document.getElementById('cameras').value;
 
 /*const res = await fetch("https://api-inicosiadt.cyens.org.cy/api/smartnicosia-nokia/traffic/analytics/",
 { method: 'GET', headers:{
-  Authorization : 'Basic ' + process.env.API_TOKEN
+  Authorization : 'Basic ' + process.env.REACT_APP_API_TOKEN
 } })
 const data = await res.json()
 const cameres = data.analytics
@@ -47,8 +47,8 @@ console.log(dropDownOptions);*/
   var period=time-10800000;
   
   var obj1;
-  
-  var obj2 =await fetch(`https://api-inicosiadt.cyens.org.cy/api/smartnicosia-nokia/traffic/traffic-reports/?va_ids=%5B${selectedValue}%5D&group_by=hour&start_date=${period}&end_date=${time}    `, { method: 'GET', headers:{Authorization : 'Basic a2lrYXMuYW5kcmVhc0B1Y3kuYWMuY3k6WUhueTVIalI4amNSNGU3'} })
+
+  var obj2 =await fetch(`https://api-inicosiadt.cyens.org.cy/api/smartnicosia-nokia/traffic/traffic-reports/?va_ids=%5B${selectedValue}%5D&group_by=hour&start_date=${period}&end_date=${time}    `, { method: 'GET', headers:{Authorization : 'Basic ' + process.env.REACT_APP_API_TOKEN} })
     //.then(data => data.json()) // Parsing the data into a JavaScript object
     //.then(json => {JSON.stringify(json)})// Displaying the stringified data in an alert popup
    obj1=await obj2.json();
@@ -118,7 +118,7 @@ function App() {
     const url = `https://api-inicosiadt.cyens.org.cy/api/smartnicosia-nokia/traffic/traffic-reports/?va_ids=[${cameraId}]&group_by=hour&start_date=${period}&end_date=${time}`;
     const response = await fetch(url, {
       method: 'GET',
-      headers: { Authorization: 'Basic ' + process.env.API_TOKEN }
+      headers: { Authorization: 'Basic ' + process.env.REACT_APP_API_TOKEN }
     });
     const data = await response.json();
     setTrafficData(data);
