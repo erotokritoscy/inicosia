@@ -42,7 +42,6 @@ console.log(dropDownOptions);*/
 // }})
 
 
-  //var post=await fetch('https://api-inicosiadt.cyens.org.cy/users/login/', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: {"email": "kikas.andreas@ucy.ac.cy","password": "YHny5HjR8jcR4e7"}} ).then(data => data.json()).then(json => alert(JSON.stringify(json)))
   var time= Date.now()-3600000;
   var period=time-10800000;
   
