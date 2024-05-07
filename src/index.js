@@ -22,7 +22,7 @@ const selectedValue = document.getElementById('cameras').value;
 
 /*const res = await fetch("https://api-inicosiadt.cyens.org.cy/api/smartnicosia-nokia/traffic/analytics/",
 { method: 'GET', headers:{
-  Authorization : 'Basic a2lrYXMuYW5kcmVhc0B1Y3kuYWMuY3k6WUhueTVIalI4amNSNGU3'
+  Authorization : 'Basic ' + process.env.API_TOKEN
 } })
 const data = await res.json()
 const cameres = data.analytics
