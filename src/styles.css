@@ -1,0 +1,76 @@
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+  }
+
+  main {
+    padding: 20px;
+  }
+  
+  header {
+    padding: 20px;
+  }
+  
+  footer {
+    padding: 20px;
+  }
+  
+  .App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  .App-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .App-header h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .App-header p {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  .traffic-reports,
+  .camera-selector {
+    margin-bottom: 20px;
+  }
+  
+  .traffic-reports h2,
+  .camera-selector h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  select,
+  button {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #97d7ca;
+    border-radius: 5px;
+    background-color: #fff;
+    margin-right: 10px;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  p {
+    margin: 5px 0;
+  }
