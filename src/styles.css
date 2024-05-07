@@ -43,7 +43,15 @@ body {
   .camera-selector {
     margin-bottom: 20px;
   }
-  
+
+  .camera-selector-2 {
+    width: fit-content;
+  }
+
+  .traffic-reports-1 {
+    margin-left: 30px;
+  }
+
   .traffic-reports h2,
   .camera-selector h2 {
     font-size: 20px;

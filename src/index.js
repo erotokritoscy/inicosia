@@ -134,17 +134,18 @@ function App() {
         <p>Check out the latest traffic reports</p>
       </header>
       <main>
-        <section className="traffic-reports">
+        <section className="traffic-reports-1">
           <h2>Traffic Reports</h2>
+          <h2>Select Camera</h2>
+            <select id="cameras-3" onChange={handleCameraSelect} class="camera-selector-2">
+                <option value="88">Agora Agiou Ant. (Digeni Akrita pros Aglantzia)</option>
+                <option value="85">A. Leventi (Ethniki Froura) IN</option>
+                <option value="84">A. Leventi (Entry) IN</option>
+            </select>
+            <button onClick={callApi}>SEARCH</button>
         </section>
         <section className="camera-selector">
-          <h2>Select Camera</h2>
-          <select id="cameras" onChange={handleCameraSelect}>
-            <option value="88">Agora Agiou Ant. (Digeni Akrita pros Aglantzia)</option>
-            <option value="85">A. Leventi (Ethniki Froura) IN</option>
-            <option value="84">A. Leventi (Entry) IN</option>
-          </select>
-          <button onClick={callApi}>SEARCH</button>
+
         </section>
         <section className="traffic-reports">
           <MapContainer center={[location.lat, location.lng]} zoom={13} scrollWheelZoom={true} key={selectedCamera} style={{ height: '400px', width: '100%' }}>
