@@ -109,6 +109,7 @@ function App() {
 
   useEffect(() => {
     setLocation(cameraLocations[selectedCamera]);
+    document.title = `Traffic Report`;
   }, [selectedCamera]);
   
   async function fetchTrafficData(cameraId) {
