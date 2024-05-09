@@ -92,7 +92,10 @@ console.log(dropDownOptions);*/
 const cameraLocations = {
   '88': { lat: 35.1681,lng: 33.3711, name: "Agora Agiou Ant. (Digeni Akrita pros Aglantzia)" },
   '85': { lat: 35.1667, lng: 33.3667, name: "A. Leventi (Ethniki Froura) IN" },
-  '84': { lat: 35.1670, lng: 33.3670, name: "A. Leventi (Entry) IN" }
+  '84': { lat: 35.1670, lng: 33.3670, name: "A. Leventi (Entry) IN" },
+  '83': { lat: 35.1626611, lng: 33.3631584, name: "Makariou Avenue Cam 12 - LPR" },
+  '69': { lat: 35.1658328, lng: 33.3560548, name: "Stasikratous cam10" },
+  '31': { lat: 35.1787719, lng: 33.3755368, name: "Kyriakou Matsi cam01" },
 };
 
 function App() {
@@ -115,6 +118,7 @@ function App() {
   async function fetchTrafficData(cameraId) {
     const time = Date.now() - 3600000;
     const period = time - 10800000;
+    alert(period)
     const url = `https://api-inicosiadt.cyens.org.cy/api/smartnicosia-nokia/traffic/traffic-reports/?va_ids=[${cameraId}]&group_by=hour&start_date=${period}&end_date=${time}`;
     const response = await fetch(url, {
       method: 'GET',
@@ -142,6 +146,9 @@ function App() {
                 <option value="88">Agora Agiou Ant. (Digeni Akrita pros Aglantzia)</option>
                 <option value="85">A. Leventi (Ethniki Froura) IN</option>
                 <option value="84">A. Leventi (Entry) IN</option>
+                <option value="83">Makariou Avenue Cam 12 - LPR</option>
+                <option value="69">Stasikratous cam10</option>
+                <option value="31">Kyriakou Matsi cam01</option>
             </select>
             <button onClick={callApi}>SEARCH</button>
         </section>
