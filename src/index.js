@@ -118,7 +118,6 @@ function App() {
   async function fetchTrafficData(cameraId) {
     const time = Date.now() - 3600000;
     const period = time - 10800000;
-    alert(period)
     const url = `https://api-inicosiadt.cyens.org.cy/api/smartnicosia-nokia/traffic/traffic-reports/?va_ids=[${cameraId}]&group_by=hour&start_date=${period}&end_date=${time}`;
     const response = await fetch(url, {
       method: 'GET',
